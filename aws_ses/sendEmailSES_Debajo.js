@@ -33,12 +33,13 @@ const params = {
 
 
 // Send the email
-async function sendEmailSES_Debajo(_subject, _content, _type) {
+async function sendEmailSES_Debajo(_subject, _content) {
   /* SUBJECT */
   params.Message.Subject.Data = _subject + _content.symbol
   /* CONTENT */
-  const textoLow = 'Precio esperado: ' + _content.lowTarget +'. Precio actual: '+ _content.price 
-  params.Message.Body.Text.Data = textoLow
+  const text = `Precio esperado: ${_content.lowTarget}\nPrecio actual: ${_content.price}\nSymbol: ${_content.symbol}\nCoingecko: ${_content.coingecko}\nvolume6h: ${_content.volume6h}\nvolume24h: ${_content.volume24h}`;
+
+  params.Message.Body.Text.Data = text
   
 
   try {

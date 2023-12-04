@@ -1,16 +1,17 @@
-const { getPrice } = require("./getPrice");
+const { getPriceByPool } = require("./getPriceByPool");
 const { alerts } = require("./data/alerts");
 
 async function getAllPrices() {
   try {
-    const getPriceAsync = async (alert) => {
-      const data = await getPrice(alert);
+    const getPriceByPoolAsync = async (alert) => {
+      const data = await getPriceByPool(alert);
+
 
       const allData = { ...alert, ...data.data }; // Simplified object merging
       return allData;
     };
 
-    const alertPromises = alerts.map(getPriceAsync);
+    const alertPromises = alerts.map(getPriceByPoolAsync);
     const allData = await Promise.all(alertPromises);
 
     return allData;

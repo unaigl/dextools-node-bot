@@ -1,6 +1,7 @@
 const { getAllPrices } = require("./getAllPrices");
 const { sendEmailSES_Debajo } = require("./aws_ses/sendEmailSES_Debajo");
 const { sendEmailSES_Encima } = require("./aws_ses/sendEmailSES_Encima");
+const { logResult } = require("./helpers/helpers");
 
 const emailContentHigh = "MI BOT - Precio por ENCIMA de lo esperado - ";
 const emailContentLow = "MI BOT - Precio por DEBAJO de lo esperado - ";
@@ -10,15 +11,15 @@ async function execute() {
     const allPrices = await getAllPrices();
 
 
-    allPrices.forEach(async (alert) => {
-      console.log('alert',alert)
-      console.log('alert.highTarget && alert.highTarget < alert.price',!!alert.highTarget , alert.highTarget < alert.price)
-      if (alert.highTarget && alert.highTarget < alert.price)
-        await sendEmailSES_Encima(emailContentHigh, alert);
+    allPrices.forEach(async (alert,i) => {
+      const result = logResult(alert)
+      console.log(i, " - ",result)
 
-        console.log('alert.lowTarget && alert.lowTarget > alert.price',!!alert.lowTarget , alert.lowTarget > alert.price)
+      if (alert.highTarget && alert.highTarget < alert.price)
+        await sendEmailSES_Encima(emailContentHigh, result);
+
       if (alert.lowTarget && alert.lowTarget > alert.price) 
-        await sendEmailSES_Debajo(emailContentLow, alert);
+        await sendEmailSES_Debajo(emailContentLow, result);
     });
   } catch (error) {
     console.error("Error in execute:", error);
@@ -26,6 +27,7 @@ async function execute() {
 }
 
 execute();
+
 
 
 /* 

@@ -11,8 +11,6 @@ async function getPrice(alert) {
   /* var */
   const chain = alert.chain;
   const address = alert.address;
-  // const chain = 'arbitrum';
-  // const address = '0x11f98c7e42a367dab4f200d2fdc460fb445ce9a8';
   
   const apiUrlPrice = `https://open-api.dextools.io/free/v2/token/${chain}/${address}/price`;
   
