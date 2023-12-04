@@ -18,9 +18,10 @@ async function getPriceByPool(alert) {
       headers: headers,
     });
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
+    /* TODO necesaio eliminaa codigo? */
+    // if (!response.ok) {
+    //   throw new Error(`HTTP error! Status: ${response.status}`);
+    // }
 
     const data = await response.json();
 
@@ -28,7 +29,7 @@ async function getPriceByPool(alert) {
     return data;
   } catch (error) {
     // Handle errors
-    console.error("Error:", error.message);
+    console.error("Error at getPriceByPool:", error.message);
     throw error; // Propagate the error to the caller
   }
 }

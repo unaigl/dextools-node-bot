@@ -37,7 +37,7 @@ async function sendEmailSES_Encima(_subject, _content) {
   /* SUBJECT */
   params.Message.Subject.Data = _subject + _content.symbol
   /* CONTENT */
-  const text = `Precio esperado: ${_content.lowTarget}\nPrecio actual: ${_content.price}\nSymbol: ${_content.symbol}\nCoingecko: ${_content.coingecko}\nvolume6h: ${_content.volume6h}\nvolume24h: ${_content.volume24h}`;
+  const text = `Precio esperado: ${_content.highTarget}\nPrecio actual: ${_content.price}\nSymbol: ${_content.symbol}\nCoingecko: ${_content.coingecko}\nvolume6h: ${_content.volume6h}\nvolume24h: ${_content.volume24h}`;
 
   params.Message.Body.Text.Data = text
   

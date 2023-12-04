@@ -36,7 +36,7 @@ const alerts = [
     pool: "0x51dcaf423fe39f620a13379cd26821cf8d433308",
     address: "0x8850d2c68c632e3b258e612abaa8fada7e6958e5",
     buyPrice_USD: "",
-    highTarget: 0.000000003,
+    highTarget: 0.00000003,
     lowTarget: 0,
   },
   {

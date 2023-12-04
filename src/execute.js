@@ -1,7 +1,7 @@
 const { getAllPrices } = require("./getAllPrices");
-const { sendEmailSES_Debajo } = require("./aws_ses/sendEmailSES_Debajo");
-const { sendEmailSES_Encima } = require("./aws_ses/sendEmailSES_Encima");
-const { logResult } = require("./helpers/helpers");
+const { sendEmailSES_Debajo } = require("../aws_ses/sendEmailSES_Debajo");
+const { sendEmailSES_Encima } = require("../aws_ses/sendEmailSES_Encima");
+const { logResult } = require("../helpers/logResult");
 
 const emailContentHigh = "MI BOT - Precio por ENCIMA de lo esperado - ";
 const emailContentLow = "MI BOT - Precio por DEBAJO de lo esperado - ";
@@ -10,6 +10,11 @@ async function execute() {
   try {
     const allPrices = await getAllPrices();
 
+    /* todo volumen del pool */
+    /* todo volumen del pool */
+    /* todo volumen del pool */
+    /* todo volumen del pool */
+    /* todo volumen del pool */
 
     allPrices.forEach(async (alert,i) => {
       const result = logResult(alert)
