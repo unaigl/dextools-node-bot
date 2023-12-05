@@ -10,11 +10,11 @@ async function execute() {
   try {
     const allPrices = await getAllPrices();
 
-    /* todo volumen del pool */
-    /* todo volumen del pool */
-    /* todo volumen del pool */
-    /* todo volumen del pool */
-    /* todo volumen del pool */
+    /* topo EN json PPOPIEDAD PAAA NO ENVIAA EMAILS CADA 6H */
+    /* topo EN json PPOPIEDAD PAAA NO ENVIAA EMAILS CADA 6H */
+    /* topo EN json PPOPIEDAD PAAA NO ENVIAA EMAILS CADA 6H */
+    /* topo EN json PPOPIEDAD PAAA NO ENVIAA EMAILS CADA 6H */
+    /* topo EN json PPOPIEDAD PAAA NO ENVIAA EMAILS CADA 6H */
 
     allPrices.forEach(async (alert,i) => {
       const result = logResult(alert)

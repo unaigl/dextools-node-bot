@@ -1,6 +1,5 @@
 const { getPriceByPool } = require("../dextools_API/getPriceByPool");
 const { alerts } = require("../data/alerts");
-const { deleteRepeted } = require("../helpers/deleteRepeted.js");
 
 const fs = require("fs");
 
@@ -17,7 +16,7 @@ async function getAllPrices() {
 
       
       const allData = { ...alert, ...data.data }; // Simplified object merging
-      if(data.errorCode) rewriteJson(allData)
+    if(data.errorCode) rewriteJson(allData)
 
       return allData;
     };
@@ -45,11 +44,20 @@ function rewriteJson(alert,data) {
   const jsonData = readJSON(filePath);
 
   jsonData.push(alert)
+  // const allData = [ alert, jsonData ];
 
-  /* eliminamos los tokens repetidos */
-  const jsonDataNoRepeted = deleteRepeted(jsonData)
 
-  writeJSON(jsonDataNoRepeted);
+  /* TODO eliminar los repetidos, en base al address del pool */
+  /* TODO eliminar los repetidos, en base al address del pool */
+  /* TODO eliminar los repetidos, en base al address del pool */
+  /* TODO eliminar los repetidos, en base al address del pool */
+  /* TODO eliminar los repetidos, en base al address del pool */
+  /* TODO eliminar los repetidos, en base al address del pool */
+  // const allDataCleaned = allData.filter((obj)=>{
+
+  // })
+
+  writeJSON(jsonData);
 
 }
 

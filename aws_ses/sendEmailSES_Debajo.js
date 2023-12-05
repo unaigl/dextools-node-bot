@@ -38,8 +38,9 @@ async function sendEmailSES_Debajo(_subject, _content) {
   params.Message.Subject.Data = _subject + _content.symbol
   /* CONTENT */
   const text = `Precio esperado: ${_content.lowTarget}\nPrecio actual: ${_content.price}\nSymbol: ${_content.symbol}\nCoingecko: ${_content.coingecko}\nvolume6h: ${_content.volume6h}\nvolume24h: ${_content.volume24h}`;
+  const textComplete = text + `\nPD: El volumen es solo de 1 pool en especifico`
 
-  params.Message.Body.Text.Data = text
+  params.Message.Body.Text.Data = textComplete
   
 
   try {

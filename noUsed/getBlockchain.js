@@ -9,11 +9,8 @@ async function getPrice(alert) {
 
   let response;
   
-  /* var */
-  const chain = alert.chain;
-  const address = alert.address;
   
-  const apiUrlPrice = `https://open-api.dextools.io/free/v2/token/${chain}/${address}/price`;
+  const apiUrlPrice = `https://api-dev.dextools.io/v2/blockchain?sort=bsc&order=desc`;
   
   // Set up headers
   const headers = new Headers();

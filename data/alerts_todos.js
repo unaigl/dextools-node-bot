@@ -8,6 +8,7 @@ const alerts = [
     buyPrice_USD: "",
     highTarget: 1,
     lowTarget: 0,
+    emailSend: false
   },
   {
     chain: "bsc",
