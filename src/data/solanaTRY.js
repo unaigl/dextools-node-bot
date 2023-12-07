@@ -15,7 +15,7 @@ const alerts = [
     coingecko: "https://www.coingecko.com/es/monedas/elumia",
     symbol: "ELU",
     pool: "HFDuu77A4ChRQW3Q91GqZpNH3rtucd9hDUqCTXGGUTrN",
-    address: "4tJZhSdGePuMEfZQ3h5LaHjTPsw1iWTRFTojnZcwsAU6",
+    address: "ASoLXbfe7cd6igh5yiEsU8M7FW64QRxPKkxk7sjAfond",
     buyPrice_USD: "",
     highTarget: 0.013,
     lowTarget: 0,

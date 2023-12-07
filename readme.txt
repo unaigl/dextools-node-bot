@@ -1,3 +1,4 @@
 https://developer.dextools.io/
 
---  node src/execute.js
+--  
+node src/index.js

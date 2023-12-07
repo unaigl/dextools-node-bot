@@ -1,4 +1,17 @@
+
+
 const alerts = [
+  {
+    chain: "ether",
+    coingecko: "https://www.coingecko.com/es/monedas/bitcoin",
+    symbol: "BTC", // WBTC
+    pool: "0xcbcdf9626bc03e24f779434178a73a0b4bad62ed",
+    address: "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599", // WBTC
+    buyPrice_USD: "",
+    highTarget: 45000,
+    lowTarget: 35000,
+    emailSend: false
+  },
   {
     chain: "arbitrum",
     coingecko: "https://www.coingecko.com/es/monedas/spartadex",
@@ -8,7 +21,6 @@ const alerts = [
     buyPrice_USD: "",
     highTarget: 1,
     lowTarget: 0,
-    emailSend: false
   },
   {
     chain: "bsc",
@@ -88,6 +100,45 @@ const alerts = [
     address: "4tJZhSdGePuMEfZQ3h5LaHjTPsw1iWTRFTojnZcwsAU6",
     buyPrice_USD: "",
     highTarget: 0.013,
+    lowTarget: 0,
+  },
+  {
+    chain: "ether",
+    coingecko: "https://www.coingecko.com/es/monedas/wall-street-memes",
+    symbol: "WSM",
+    pool: "0xacfc50ec5fe0fd039e83380b8ab343b77a49704f",
+    address: "0xb62e45c3df611dce236a6ddc7a493d79f9dfadef",
+    buyPrice_USD: "",
+    highTarget: 0.1,
+    lowTarget: 0,
+  },
+  {
+    chain: "ether",
+    coingecko: "https://www.coingecko.com/es/monedas/pepe",
+    symbol: "PEPE",
+    pool: "0xa43fe16908251ee70ef74718545e4fe6c5ccec9f",
+    address: "0x6982508145454ce325ddbe47a25d4ec3d2311933",
+    buyPrice_USD: "",
+    highTarget: 0.000005,
+    lowTarget: 0,
+    pocentajeVolumen: "1,5 %",
+  }, {
+    chain: "ether",
+    coingecko: "https://www.coingecko.com/es/monedas/grok-2",
+    symbol: "$GROK",
+    pool: "0x69c66beafb06674db41b22cfc50c34a93b8d82a2",
+    address: "0x8390a1da07e376ef7add4be859ba74fb83aa02d5",
+    buyPrice_USD: "",
+    highTarget: 0.04,
+    lowTarget: 0,
+  }, {
+    chain: "bsc",
+    coingecko: "https://www.coingecko.com/es/monedas/games-for-a-living",
+    symbol: "GFAL",
+    pool: "0xb3db5f4f4dbdb6d75aa7c2dce23ecd2d1b557a54",
+    address: "0x47c454ca6be2f6def6f32b638c80f91c9c3c5949",
+    buyPrice_USD: "",
+    highTarget: 0.2,
     lowTarget: 0,
   },
 ];

@@ -1,7 +1,7 @@
-const { getAllPrices } = require("./getAllPrices");
-const { sendEmailSES_Debajo } = require("../aws_ses/sendEmailSES_Debajo");
-const { sendEmailSES_Encima } = require("../aws_ses/sendEmailSES_Encima");
-const { logResult } = require("../helpers/logResult");
+const { getAllPrices } = require("./utils/getAllPrices");
+const { sendEmailSES_Debajo } = require("./services/aws_ses/sendEmailSES_Debajo");
+const { sendEmailSES_Encima } = require("./services/aws_ses/sendEmailSES_Encima");
+const { logResult } = require("./utils/helpers/logResult");
 
 const emailContentHigh = "MI BOT - Precio por ENCIMA de lo esperado - ";
 const emailContentLow = "MI BOT - Precio por DEBAJO de lo esperado - ";
