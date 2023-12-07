@@ -1,10 +1,10 @@
 const { getPriceByPool } = require("./dextools_API/getPriceByPool.js");
 const { alerts } = require("../data/alerts.js");
-const { deleteRepeted } = require("./helpers/deleteRepeted.js");
+// const { deleteRepeted } = require("./helpers/deleteRepeted.js");
 
-const fs = require("fs");
+// const fs = require("fs");
 
-const filePath = "C:/Users/uigla/Desktop/dextools-node-bot/src/data/errors/errors.json";
+// const filePath = "C:/Users/uigla/Desktop/dextools-node-bot/src/data/errors/errors.json";
 
 async function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -42,35 +42,35 @@ async function getAllPrices() {
 module.exports = { getAllPrices };
 
 /* helper */
-function rewriteJson(alert,data) {
-  const jsonData = readJSON(filePath);
+// function rewriteJson(alert,data) {
+//   const jsonData = readJSON(filePath);
 
-  jsonData.push(alert)
+//   jsonData.push(alert)
 
-  /* eliminamos los tokens repetidos */
-  const jsonDataNoRepeted = deleteRepeted(jsonData)
+//   /* eliminamos los tokens repetidos */
+//   const jsonDataNoRepeted = deleteRepeted(jsonData)
 
-  writeJSON(jsonDataNoRepeted);
+//   writeJSON(jsonDataNoRepeted);
 
-}
+// }
 
-function readJSON() {
-  try {
-    const jsonData = fs.readFileSync(filePath, "utf8");
-    return JSON.parse(jsonData);
-  } catch (error) {
-    console.error("Error reading JSON file:", error);
-    throw error;
-  }
-}
+// function readJSON() {
+//   try {
+//     const jsonData = fs.readFileSync(filePath, "utf8");
+//     return JSON.parse(jsonData);
+//   } catch (error) {
+//     console.error("Error reading JSON file:", error);
+//     throw error;
+//   }
+// }
 
-function writeJSON(jsonData) {
-  try {
-    const jsonString = JSON.stringify(jsonData, null, 2);
-    fs.writeFileSync(filePath, jsonString, "utf8");
-  } catch (error) {
-    console.error("Error writing JSON file:", error);
-    throw error;
-  }
-}
+// function writeJSON(jsonData) {
+//   try {
+//     const jsonString = JSON.stringify(jsonData, null, 2);
+//     fs.writeFileSync(filePath, jsonString, "utf8");
+//   } catch (error) {
+//     console.error("Error writing JSON file:", error);
+//     throw error;
+//   }
+// }
 
