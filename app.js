@@ -2,8 +2,6 @@ const express = require("express")
 const cors = require("cors")
 const morgan = require("morgan")
 const mongoose = require("mongoose")
-// const { Router } = require("express")
-// const Coins = require("./src/schema/coins.schema.js")
 const path = require("path")
 const dotenv = require("dotenv")
 const routes = require("./src/routes/routes.js")
@@ -64,10 +62,11 @@ process.on('SIGINT', async () => {
 });
 
 
-
-app.use(routes)
 /*  */
+/* ROUTES */
+app.use(routes)
 
+/*  */
 app.listen(config.PORT, () => {
   console.log(`Server started on port ${config.PORT}`)
 })

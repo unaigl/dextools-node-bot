@@ -23,9 +23,7 @@ async function getPriceByPool(alert) {
     //   throw new Error(`HTTP error! Status: ${response.status}`);
     // }
     
-    
     const data = await response.json();
-    // console.log('response',data)
     
     // Handle the response data
     return data;

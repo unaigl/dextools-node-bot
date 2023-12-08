@@ -1,5 +1,5 @@
 const { getPriceByPool } = require("./dextools_API/getPriceByPool.js");
-const { alerts } = require("../data/alerts.js");
+// const { alerts } = require("../data/alerts.js");
 // const { deleteRepeted } = require("./helpers/deleteRepeted.js");
 
 // const fs = require("fs");
@@ -10,13 +10,12 @@ async function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function getAllPrices() {
+async function getAllPrices(alerts) {
   try {
     const getPriceByPoolAsync = async (alert) => {
       const data = await getPriceByPool(alert);
 
-      
-      const allData = { ...alert, ...data.data }; // Simplified object merging
+      const allData = { ...alert._doc, ...data.data }; // Simplified object merging
       /* not at serverless function */
       // if(data.errorCode) rewriteJson(allData)
 
