@@ -28,7 +28,7 @@ async function getAllPrices(alerts) {
     for (const alert of alerts) {
       const result = await getPriceByPoolAsync(alert);
       alertPromises.push(result);
-      await sleep(300); 
+      await sleep(600); 
     }
 
     return alertPromises;
