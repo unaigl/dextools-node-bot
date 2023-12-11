@@ -18,30 +18,30 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/email", async (req, res) => {
-  try {
-    const data = await Coins.find();
-    if (!data) res.status(302).json("no data");
+// router.get("/email", async (req, res) => {
+//   try {
+//     const data = await Coins.find();
+//     if (!data) res.status(302).json("no data");
 
-    const result = await processData(data);
+//     const result = await processData(data);
 
-    /* TODO if -> SES */
-    /* TODO if -> SES */
-    /* TODO if -> SES */
-    /* TODO if -> SES */
-    /* TODO if -> SES */
-    /* TODO if -> SES */
-    /* TODO if -> SES */
-    /* TODO if -> SES */
-    /* TODO if -> SES */
+//     /* TODO if -> SES */
+//     /* TODO if -> SES */
+//     /* TODO if -> SES */
+//     /* TODO if -> SES */
+//     /* TODO if -> SES */
+//     /* TODO if -> SES */
+//     /* TODO if -> SES */
+//     /* TODO if -> SES */
+//     /* TODO if -> SES */
 
-    return res.json({});
+//     return res.json({});
 
 
-  } catch (error) {
-    console.log(error);
-  }
-});
+//   } catch (error) {
+//     console.log(error);
+//   }
+// });
 
 module.exports = router;
 
