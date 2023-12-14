@@ -91,6 +91,7 @@ function html(data) {
                   item.coingecko
                 }" target="_blank">${item.coingecko}</a>',<br>
                 &nbsp;&nbsp;buyPrice_USD: ${item.buyPrice_USD || 0},<br>
+                &nbsp;&nbsp;reference_price: ${item.reference_price || 0},<br>
                 &nbsp;&nbsp;price: ${item.price},<br>
                 &nbsp;&nbsp;highTarget: ${item.highTarget},<br>
                 &nbsp;&nbsp;lowTarget: ${item.lowTarget},<br>
